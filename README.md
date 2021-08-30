@@ -1,3 +1,9 @@
+# WP's note
+
+Before `./autogen.sh`, make sure these packages are isntalled:
+
+`sudo apt install libtool autoconf`
+
 # nfdump
 
 Stable Release v1.6.23
