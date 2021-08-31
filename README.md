@@ -2,7 +2,9 @@
 
 Before `./autogen.sh`, make sure these packages are isntalled:
 
-`sudo apt install libtool autoconf`
+`sudo apt install libtool autoconf pkg-config`
+
+pkg-config can fix the problem "configure.ac:41: error: possibly undefined macro: AC_MSG_ERROR"
 
 # nfdump
 
