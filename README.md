@@ -2,7 +2,7 @@
 
 Before `./autogen.sh`, make sure these packages are isntalled:
 
-`sudo apt install libtool autoconf pkg-config flex libbz2-dev`
+`sudo apt install libtool autoconf pkg-config flex libbz2-dev doxygen`
 
 pkg-config can fix the problem "configure.ac:41: error: possibly undefined macro: AC_MSG_ERROR"
 
