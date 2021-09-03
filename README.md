@@ -6,6 +6,14 @@ Before `./autogen.sh`, make sure these packages are isntalled:
 
 pkg-config can fix the problem "configure.ac:41: error: possibly undefined macro: AC_MSG_ERROR"
 
+then:
+
+```
+./configure
+make
+sudo make install
+```
+
 If you meet error: "error while loading shared libraries: libnfdump-1.6.23.so: cannot open shared object file: No such file or directory"
 
 try `ldconfig`
