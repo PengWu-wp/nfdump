@@ -6,7 +6,7 @@ RXB_TEMP=0
 RXB_CURRENT=0
 RXBPS=0
 
-if [ $# -lt 2 ]
+if [ $# -lt 1 ]
 then
 	echo "ifname not specified."
 	echo "Usage: $0 <ifname>"
