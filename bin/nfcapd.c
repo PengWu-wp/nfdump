@@ -672,16 +672,25 @@ srecord_t	*commbuff;
 		fs->received = tv;
 		/* Process data - have a look at the common header */
 		version = ntohs(nf_header->version);
+
+		struct timespec time_start = { 0, 0 }, time_end = { 0, 0 }; // Test processing time
+
 		switch (version) {
 			case 1: 
 				Process_v1(in_buff, cnt, fs);
 				break;
 			case 5: // fall through
-			case 7: 
+			case 7:
+				// clock_gettime(CLOCK_REALTIME, &time_start);
 				Process_v5_v7(in_buff, cnt, fs);
+				// clock_gettime(CLOCK_REALTIME, &time_end);
+				// printf("%ld\n",time_end.tv_nsec-time_start.tv_nsec);
 				break;
-			case 9: 
+			case 9:
+				// clock_gettime(CLOCK_REALTIME, &time_start);
 				Process_v9(in_buff, cnt, fs);
+				// clock_gettime(CLOCK_REALTIME, &time_end);
+				// printf("%ld\n",time_end.tv_nsec-time_start.tv_nsec);
 				break;
 			case 10: 
 				Process_IPFIX(in_buff, cnt, fs);
